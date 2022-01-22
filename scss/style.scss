@@ -1,0 +1,90 @@
+@import './reset';
+@import './color';
+
+
+body {
+    width: 1440px;   
+    height: 110vh;
+    background-color: $light-gray;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        
+
+        &:hover {
+            width: 90%;
+            margin-left: 100px;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            box-shadow: 4px 5px 5px $grayish-blue; 
+            transition-delay: 0.3s;
+            transition-duration: 5s;
+        }
+        
+
+   #container {
+    width: 350px;
+    height: 500px;   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+        .qrcode {
+            width: 310px;
+            height: 480px;
+            border: 2px solid $white;
+            background-color: $white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 5px $grayish-blue;            
+
+                img {
+                    width: 300px;
+                    transform: scale(93%);
+                    border-radius: 15px;
+                }
+                strong {
+                    
+                    margin: 0px 10px ;
+                    font-size: 1.4rem;
+                   
+                    color: $dark-blue;
+                        
+                }
+                p {
+                    
+                    margin: 10px 10px;
+                    text-align: center;
+                    padding-top: 15px;
+                     color: $light-gray;
+                     font-size: 1em;
+                     
+                }
+
+        }
+    
+}
+                .attribution {
+                    margin-top: 20px;
+
+                    a {
+                        text-decoration: none;
+                    }
+                    
+                }
+}
+@media (max-width: 375px) {
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+            .attribution {
+                font-size: 0.9rem;
+                margin: 0px 5px;
+            }
+    }
+  }
